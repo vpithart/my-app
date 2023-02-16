@@ -2,13 +2,9 @@ name: some-action
 run-name: Some GitHub Actions
 on: [push]
 jobs:
-  check-react-version:
+  check-bash-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm install -g react
-      - run: react -v
+      - run: bash -v
       
